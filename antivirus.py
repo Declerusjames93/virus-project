@@ -2,16 +2,16 @@ from backup import getpath, AMOUNT, CORRECT_PASS, AMOUNT_TRIES, username
 from getpass import getpass
 import os
 
-password = getpass(prompt="antre kod akse a: ")
+password = getpass(prompt="Enter the access code: ")
 a = 0
 while CORRECT_PASS!= password and a < AMOUNT_TRIES:
     print("warning!!!acces code invalid")
-    password = getpass(prompt="antre kod akse a: ")
+    password = getpass(prompt="Enter the access code: ")
     a += 1
     if a ==AMOUNT_TRIES:
         break
 if a == 4:
-    print("acces invalide")
+    print("Invalid access")
 if CORRECT_PASS == password:
     path = getpath()
     #clean
